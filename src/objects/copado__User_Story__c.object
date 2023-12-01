@@ -8213,7 +8213,15 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <columns>copado__Epic__c</columns>
         <columns>copado__Theme__c</columns>
         <columns>copado__Project__c</columns>
+        <columns>copado__Org_Credential__c</columns>
+        <columns>copado__Promote_Change__c</columns>
+        <columns>copado__Release__c</columns>
         <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>copado__User_Story__c.copado__User_Story</value>
+        </filters>
         <label>All</label>
     </listViews>
     <listViews>
@@ -10039,6 +10047,25 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <searchResultsAdditionalFields>copado__US_Feature__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Require_PR_for_Apex</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+(copado__Has_Apex_Code__c = true),
+OR(
+AND(
+PRIORVALUE(copado__Promote_Change__c) = false,
+copado__Promote_Change__c = true
+),
+AND(
+PRIORVALUE(copado__Promote_and_Deploy__c) = false,
+copado__Promote_and_Deploy__c = true
+)
+),
+copado__Pull_Requests_Approved__c =false
+)</errorConditionFormula>
+        <errorMessage>Pull Request must be approved before deploying Apex</errorMessage>
+    </validationRules>
     <validationRules>
         <fullName>copado__Cancellation_reason_required</fullName>
         <active>false</active>

@@ -457,14 +457,27 @@
     </fields>
     <listViews>
         <fullName>AllContacts</fullName>
+        <booleanFilter>1 OR 2</booleanFilter>
         <columns>FULL_NAME</columns>
         <columns>ACCOUNT.NAME</columns>
         <columns>CONTACT.TITLE</columns>
         <columns>CONTACT.PHONE1</columns>
         <columns>CONTACT.EMAIL</columns>
+        <columns>External_Id__c</columns>
+        <columns>CONTACT.DEPARTMENT</columns>
         <columns>CORE.USERS.FIRST_NAME</columns>
         <columns>CORE.USERS.LAST_NAME</columns>
         <filterScope>Everything</filterScope>
+        <filters>
+            <field>ACCOUNT.NAME</field>
+            <operation>equals</operation>
+            <value>New York Jets LLC</value>
+        </filters>
+        <filters>
+            <field>ACCOUNT.NAME</field>
+            <operation>equals</operation>
+            <value>Buffalo Bills Inc</value>
+        </filters>
         <label>All Contacts</label>
     </listViews>
     <listViews>

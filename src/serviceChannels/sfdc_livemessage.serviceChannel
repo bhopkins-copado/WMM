@@ -3,6 +3,7 @@
     <doesMinimizeWidgetOnAccept>false</doesMinimizeWidgetOnAccept>
     <hasAfterConvoWorkTimer>false</hasAfterConvoWorkTimer>
     <hasAutoAcceptEnabled>false</hasAutoAcceptEnabled>
+    <isInterruptible>false</isInterruptible>
     <label>LiveMessage</label>
     <relatedEntityType>MessagingSession</relatedEntityType>
 </ServiceChannel>

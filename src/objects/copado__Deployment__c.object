@@ -1428,7 +1428,7 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <searchResultsAdditionalFields>copado__Status__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>copado__Schedule__c</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Cancel_Deployment</fullName>
